@@ -42,7 +42,7 @@ int main(){
                 cout<<"even\n";
             }
             else {
-                cout<<"odd";
+                cout<<"odd\n";
             }
         }
     }
