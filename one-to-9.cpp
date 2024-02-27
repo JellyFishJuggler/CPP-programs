@@ -7,7 +7,7 @@ int main(){
     cout << "Enter number:";
     cin >> element;
     string arr[9] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}; 
-    if (element >= 1 || element <= 9)
+    if (element >= 1 && element <= 9)
         {
             cout << arr[element-1];
         }
