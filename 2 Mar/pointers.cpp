@@ -7,8 +7,8 @@ using namespace std;
 void pointer(int *a, int *b)
 {
     *a = *a + *b;
-    *b = *a - *b;
-    *b = abs(*b);
+    int temp = *a - *b;
+    *b = abs(temp);
 }
 
 int main()
