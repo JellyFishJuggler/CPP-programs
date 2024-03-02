@@ -1,25 +1,23 @@
-// This code is working correctly when the initial values of 'a' and 'b' are set to 5 and 10 respectively.
-
-#include <iostream>
-#include <cmath>
+#include<iostream>
+#include<cmath>
 using namespace std;
 
-void pointer(int *a, int *b)
-{
-    *a = *a + *b;
-    int temp = *a - *b;
-    *b = abs(temp);
-}
+void pointer(int *a, int *b){
+   int temp = *a;
+   *a = *a + *b;
+   *b = temp - *b;
+   *b = abs(*b);
+} 
 
-int main()
-{
-    int a = 4, b = 5;
+
+int main(){
+    int a,b;
     int *pa = &a;
     int *pb = &b;
-    
+    cin >> a >> b;
     scanf("%d %d", &a, &b);
-    pointer(pa, pb);
-    printf("%d %d", a, b);
+    pointer(pa,pb);
+    printf("%d\n%d", a, b);
     
     return 0;
 }
