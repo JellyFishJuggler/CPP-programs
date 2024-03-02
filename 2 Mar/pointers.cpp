@@ -16,10 +16,10 @@ int main()
     int a = 4, b = 5;
     int *pa = &a;
     int *pb = &b;
-    cout << a << " " << b << endl;
+    
     scanf("%d %d", &a, &b);
     pointer(pa, pb);
     printf("%d %d", a, b);
-    cout << a << " " << b << endl;
+    
     return 0;
 }
