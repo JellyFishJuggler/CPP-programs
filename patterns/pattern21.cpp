@@ -1,25 +1,25 @@
-/* _  _  *
-   _  *  *
-   *  *  *
+/* * * *
+   _ * *
+   _ _ *
 */
 #include<iostream>
 using namespace std;
 int main(){
     int n;
     cin>>n;
-    int i=1;
+    int i =1;
     while(i<=n){
-        int space = n - i;
+        int space = i-1;
         while(space){
             cout <<" ";
             space--;
         }
-        int j =1;
-        while(j<=i){
-            cout<<"*";
+        int j =i;
+        while(j<=n){
+            cout << "*";
             j++;
         }
-        cout <<endl;
+        cout << endl;
         i++;
     }
     return 0;
