@@ -1,62 +1,72 @@
-#include<iostream>
-#include<cmath>
-#include<vector>
+//{ Driver Code Starts
+#include <bits/stdc++.h>
 using namespace std;
 
 // } Driver Code Ends
 class Solution
 {
 public:
-    vector<int> singleNumber(vector<int> nums) 
+    vector<int> singleNumber(vector<int> nums)
     {
         vector<int> ans;
+        int XOR = 0;
         int n = nums.size();
-        int XOR = nums[0];
         for (int i = 0; i < n; i++)
         {
-            XOR = XOR ^ nums[i];
+            XOR ^= nums[i];
         }
-        int right_bit = XOR & ~(XOR - 1);
-        int x,y;
-        x=0,y=0;
-        for (int j = 0; j < n; j++)
+        int right_bit = XOR & -XOR;
+
+        int x = 0, y = 0;
+        for (int num : nums)
         {
-            if (nums[j] & right_bit)
+            if (num & right_bit)
             {
-                x = x ^ nums[j];
+                x ^= num;
             }
-            else{
-                y = y ^ nums[j];
+            else
+            {
+                y ^= num;
             }
-            
         }
 
-        ans.push_back(x);
-        ans.push_back(y);
-        sort(ans.begin(), ans.end());
+        ans.push_back(min(x, y));
+        ans.push_back(max(x, y));
+
         return ans;
-          
-        
     }
 };
 
 //{ Driver Code Starts.
-int main(){
+int main()
+{
     int T;
     cin >> T;
-    while(T--)
+    while (T--)
     {
-    	int n; 
-    	cin >> n;
-    	vector<int> v(2 * n + 2);
-    	for(int i = 0; i < 2 * n + 2; i++)
-    		cin >> v[i];
-    	Solution ob;
-    	vector<int > ans = ob.singleNumber(v);
-    	for(auto i: ans)
-    		cout << i << " ";
-    	cout << "\n";
+        int n;
+        cin >> n;
+        vector<int> v(2 * n + 2);
+        for (int i = 0; i < 2 * n + 2; i++)
+            cin >> v[i];
+        Solution ob;
+        vector<int> ans = ob.singleNumber(v);
+        for (auto i : ans)
+            cout << i << " ";
+        cout << "\n";
     }
-	return 0;
+    return 0;
 }
 // } Driver Code Ends
+
+/*
+    if (x > y){
+
+            vector<int> ans{y , x};
+             return ans;
+        }else{
+
+            vector <int> ans {x ,y};
+             return ans;
+        }
+*/
