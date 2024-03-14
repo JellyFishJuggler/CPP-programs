@@ -1,18 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
-void binearySearch(int arr[],int left, int right, int target, int size){
+int binearySearch(int arr[],int left, int right, int target, int size){
   int mid = (left - right)/2  - left;
   while(left <= right){
-    if(arr[mid] > target){
+    if (arr[mid] == target) {
+      return mid;
+    } else if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
       right = mid - 1;
     }
-    else if(arr[mid] < target){
-      left = mid + 1;
-    }
-    else{
-      return  mid;
-    }
-    mid = (left - right) / 2 - left;
   }
   return -1;
 }
