@@ -4,7 +4,7 @@ bool isPowerof3(int n){
   if(n <= 0){
     return false;
   }
-  if(n>0 && (int)pow(3, 19) % 3 == 0){
+  if(n>0 && (int)pow(3, 19) % 3 == 0){               // (int)pow(3,19) => 1162261467
     return true;
   }
 
