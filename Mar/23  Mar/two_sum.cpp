@@ -7,15 +7,17 @@ using namespace std;
 
 vector<int> twoSum(vector<int> &nums, int target)
 {
-    for (int i = 1; i < nums.size(); i++)
-    {
-        if ((nums[i] + nums[i - 1]) == target)
-        {
-            return {i - 1, i};
+    map<int, int> mp;
+    for(int i=0;i<nums.size();i++){
+        int a = nums[i];
+        int more = target - a;
+        if(mp.find(more) != mp.end()){
+            return {mp[more],i};
         }
-    }
 
-    return {-1};
+        mp[a] = i;
+    }
+    return {-1,-1};
 }
 int main()
 {
