@@ -1,7 +1,3 @@
-// Failed at [3,2,3]
-// Expected : [0,2]
-// Got : [0]
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -22,7 +18,7 @@ vector<int> twoSum(vector<int> &nums, int target)
 int main()
 {
 
-    vector<int> nums = {2, 7, 11, 15};
+    vector<int> nums = {3,2.3};
     int target = 9;
     vector<int> result = twoSum(nums, target);
     for (int i = 0; i < result.size(); i++)
