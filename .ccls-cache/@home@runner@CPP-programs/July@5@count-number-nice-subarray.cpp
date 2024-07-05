@@ -6,12 +6,12 @@ public:
         int n = nums.size();
         int count = 0;
         while(r<n){
-
+            //odd element check
             if(nums[r] % 2 != 0){
                 k--;
                 count = 0;
             }
-
+            
             while(k < 0){
                 if (nums[l] % 2 != 0){
                     k++;
