@@ -1,14 +1,14 @@
 int countStudents(vector<int> &arr, int pages) {
-    int n = arr.size(); //size of array.
+    int n = arr.size();
     int students = 1;
     long long pagesStudent = 0;
     for (int i = 0; i < n; i++) {
         if (pagesStudent + arr[i] <= pages) {
-            //add pages to current student
+            //pages to current student
             pagesStudent += arr[i];
         }
         else {
-            //add pages to next student
+            // pages to next student
             students++;
             pagesStudent = arr[i];
         }
