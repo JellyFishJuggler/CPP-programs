@@ -7,8 +7,7 @@
 //To optimize this code we can use Sieve of Eratosthenes algorithm.
 
 
-#include<iostream>
-#include<cmath>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main() {
