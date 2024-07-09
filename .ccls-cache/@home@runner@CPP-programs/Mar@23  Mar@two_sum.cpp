@@ -15,21 +15,6 @@ vector<int> twoSum(vector<int> &nums, int target)
     }
     return {-1,-1};
 }
-int main()
-{
-
-    vector<int> nums = {3,2.3};
-    int target = 9;
-    vector<int> result = twoSum(nums, target);
-    for (int i = 0; i < result.size(); i++)
-    {
-        cout << result[i] << " ";
-    }
-
-    return 0;
-}
-
-
 /*
 BRUTE FORCE APPROACH : 
     class Solution {
