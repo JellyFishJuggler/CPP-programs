@@ -19,7 +19,7 @@ public:
     int get(int value){
         Node* temp = head;
         for(int i=0; i<value && temp != NULL; i++){
-            temp = temp->next;
+            temp = temp->next; 
         }
         if(temp == NULL)    return -1;
         return temp->data;
