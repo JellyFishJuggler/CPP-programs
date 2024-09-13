@@ -5,18 +5,15 @@ class Student{
 private:
     string name;
     int fees, rollno;
-    string gender;
-    float rating;
+    
 public:
     
-    Student(string n, int f, int rll, string g, float r) :  name(n), fees(f), rollno(rll), gender(g), rating(r){}
+    Student(string n, int f, int rll) :  name(n), fees(f), rollno(rll){}
 
     Student(Student &t){
         name = t.name;
         fees = t.fees;
         rollno = t.rollno;
-        gender = t.gender;
-        rating = t.rating;
         cout << "Copy Constructor Called" << endl;
     }   
 
@@ -24,8 +21,6 @@ public:
         cout << "Name of Student : " << name << endl;
         cout << "Fees : " << fees << endl;
         cout << "Roll No. : " << rollno << endl; 
-        cout << "Gender : " << gender << endl;
-        cout << "GB road ke Rate : " << rating << endl;
     }
 };
 
