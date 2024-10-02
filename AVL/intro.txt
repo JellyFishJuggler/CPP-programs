@@ -1,0 +1,18 @@
+AVL tree : Balanced BST
+where the height level difference of left and right node doesn't exceed 1.
+It remains either 0 or 1.
+
+This difference b/w the left subtree and right subtree is called balance factor.
+
+AVL : Georgy Adelson-Velsky and Evgenii Landis (yeh doh bkl hai jinhone banyi h)
+"An algorithm for the organisation of information
+
+Insertion of AVL tree -> 2 ways : Left Rotation && Right Rotation
+Following are two basic operations that can be performed to balance a BST without violating the BST property (keys(left) < key(root) < keys(right)). 
+
+Types of rotation 
+-------------------
+    Left Left
+    Right Right
+    Left Right
+    Right Left
